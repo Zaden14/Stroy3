@@ -125,6 +125,9 @@
     <Compile Include="Stranichki\AdminList.xaml.cs">
       <DependentUpon>AdminList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Stranichki\Redakt.xaml.cs">
+      <DependentUpon>Redakt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Stranichki\AdminList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stranichki\Redakt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

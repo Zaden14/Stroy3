@@ -129,9 +129,12 @@ namespace Stroy.Stranichki
 
         private void LVList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+           
         }
 
-       
+        private void BRedakt_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
