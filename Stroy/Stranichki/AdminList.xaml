@@ -21,17 +21,18 @@
             <StackPanel>
                 <TextBlock Text="Фильтровать:" FontSize="17"/>
                 <ComboBox Name="CBFil" HorizontalAlignment="Center" Height="30" Width="250" SelectionChanged="CBFil_SelectionChanged">
-                    <ComboBoxItem>Название возр.</ComboBoxItem>
-                    <ComboBoxItem>Название убыв.</ComboBoxItem>
-                    <ComboBoxItem>Стоимость возр.</ComboBoxItem>
-                    <ComboBoxItem>Стоимость убыв.</ComboBoxItem>
                     <ComboBoxItem>Остаток возр.</ComboBoxItem>
                     <ComboBoxItem>Остаток убыв.</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Сортировать:" FontSize="17"/>
-                <ComboBox Name="CBSort" Width="250" Height="30" SelectionChanged="CBSort_SelectionChanged"/>
+                <ComboBox Name="CBSort" Width="250" Height="30" SelectionChanged="CBSort_SelectionChanged">
+                    <ComboBoxItem>Название возр.</ComboBoxItem>
+                    <ComboBoxItem>Название убыв.</ComboBoxItem>
+                    <ComboBoxItem>Стоимость возр.</ComboBoxItem>
+                    <ComboBoxItem>Стоимость убыв.</ComboBoxItem>
+                </ComboBox>
             </StackPanel>
         </StackPanel>
         <ListView  Grid.Row="1"  Name="LVList" SelectionMode="Extended" SelectionChanged="LVList_SelectionChanged">

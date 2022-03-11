@@ -23,7 +23,7 @@ namespace Stroy
         public MainWindow()
         {
             InitializeComponent();
-            DateBase.DB = new Entities();
+            DateBase.DB = new Entities1();
             FrameClass.FrameMain = FrmMain;
             FrameClass.FrameMain.Navigate(new AdminList());
 

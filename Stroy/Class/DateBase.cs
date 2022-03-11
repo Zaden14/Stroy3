@@ -8,6 +8,6 @@ namespace Stroy
 {
     class DateBase
     {
-        public static Entities DB;
+        public static Entities1 DB;
     }
 }

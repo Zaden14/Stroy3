@@ -13,10 +13,10 @@ namespace Stroy
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class Entities1 : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public Entities1()
+            : base("name=Entities1")
         {
         }
     
@@ -25,6 +25,7 @@ namespace Stroy
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Agent> Agent { get; set; }
         public virtual DbSet<AgentPriorityHistory> AgentPriorityHistory { get; set; }
         public virtual DbSet<AgentType> AgentType { get; set; }
@@ -39,6 +40,5 @@ namespace Stroy
         public virtual DbSet<ProductType> ProductType { get; set; }
         public virtual DbSet<Shop> Shop { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

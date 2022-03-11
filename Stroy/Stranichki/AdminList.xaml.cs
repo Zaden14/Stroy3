@@ -115,13 +115,13 @@ namespace Stroy.Stranichki
                     MatFilter.Sort((x, y) => x.Cost.CompareTo(y.Cost));
                     MatFilter.Reverse();
                     break;
-                //case 4:
-                //    MatFilter.Sort((x, y) => x.CountInStock.CompareTo(y.CountInStock));
-                //    break;
-                //case 5:
-                //    MatFilter.Sort((x, y) => x.CountInStock.CompareTo(y.CountInStock));
-                //    MatFilter.Reverse();
-                //    break;
+                case 4:
+                    MatFilter.Sort((x, y) => x.CountInStock.CompareTo(y.CountInStock));
+                    break;
+                case 5:
+                    MatFilter.Sort((x, y) => x.CountInStock.CompareTo(y.CountInStock));
+                    MatFilter.Reverse();
+                    break;
             }
             LVList.ItemsSource = MatFilter;
             LVList.Items.Refresh();
