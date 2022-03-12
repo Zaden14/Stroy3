@@ -24,6 +24,14 @@ namespace Stroy.Stranichki
         {
             InitializeComponent();
             LVList.ItemsSource = List;
+            CBFil.Items.Add("Все типы");
+            List<MaterialType> mt = DateBase.DB.MaterialType.ToList();
+            for (int i = 0; i < mt.Count; i++)
+            {
+                CBFil.Items.Add(mt[i].Title);
+            }
+            CBFil.SelectedIndex = 0;
+            TBVsego.Text = "Записей: " + List.Count().ToString() + " из " + List.Count().ToString();
         }
 
         private void TBSup_Loaded(object sender, RoutedEventArgs e)
@@ -125,16 +133,53 @@ namespace Stroy.Stranichki
             }
             LVList.ItemsSource = MatFilter;
             LVList.Items.Refresh();
+            TBVsego.Text = "Записей: " + MatFilter.Count().ToString() + " из " + List.Count().ToString();
         }
 
         private void LVList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+            if (LVList.SelectedIndex != -1)
+            {
+                BIzmena.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BIzmena.Visibility = Visibility.Hidden;
+            }
         }
 
         private void BRedakt_Loaded(object sender, RoutedEventArgs e)
         {
+            Button B = (Button)sender;
+            int id = Convert.ToInt32(B.Uid);
+            Material MaterialEdit = DateBase.DB.Material.FirstOrDefault(y => y.ID == id);
+            Redakt editWindow = new Redakt(MaterialEdit);
+            editWindow.ShowDialog();
 
+        }
+
+
+        private void BIzmena_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedList = LVList.SelectedItem;
+            double maxMc = 0;
+            foreach (Material mC in selectedList)
+            {
+                if (mC.MinCount > maxMc)
+                {
+                    maxMc = mC.MinCount;
+                }
+            }
+            MinIzmen mCWin = new MinIzmen(maxMc);
+            mCWin.ShowDialog();
+            if (mCWin.NewMineCount > 0)
+            {
+                foreach (Material mC in selectedList)
+                {
+                    mC.MinCount = mCWin.NewMineCount;
+                }
+                LVList.Items.Refresh();
+            }
         }
     }
 }

@@ -19,9 +19,25 @@ namespace Stroy.Stranichki
     /// </summary>
     public partial class Redakt : Window
     {
+        string path;
+        bool IsCreate = false;
+        List<MaterialSupplier> MS = DateBase.DB.MaterialSupplier.ToList();
         public Redakt()
         {
             InitializeComponent();
+            CBTitle.ItemsSource = DateBase.DB.MaterialType.ToList();
+            CBTitle.SelectedValuePath = "ID";
+            CBTitle.DisplayMemberPath = "Title";
+
+        }
+        Material MaterialEdit = new Material();
+        public Redakt(Material editImport)
+        {
+            InitializeComponent();
+            MaterialEdit = editImport;
+
+            CBTitle.ItemsSource = DateBase.DB.MaterialType.ToList();
+
         }
 
         private void CBName_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -30,6 +46,16 @@ namespace Stroy.Stranichki
         }
 
         private void CBTitle_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void BDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BRedakt_Click(object sender, RoutedEventArgs e)
         {
 
         }

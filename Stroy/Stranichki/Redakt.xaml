@@ -8,13 +8,14 @@
         Icon="C:\Users\БуслаевНР\Downloads\Stroy2-master\Stroy\Resources\Chernovik.ico"
         Title="Окно редактирования" Height="400" Width="300">
     <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
-            <StackPanel Orientation="Horizontal">
-                <Image/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <Image Margin="5" Source="C:\Users\БуслаевНР\Downloads\Stroy2-master\Stroy\Resources\picture.png" Height="30" Width="80"/>
+                <Button Margin="0,5,0,0" Content="Изменить фото"/>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <TextBlock Text="Выберите наименование" Margin="20,0,0,0"/>
-                <ComboBox Name="CBName" Width="120" SelectionChanged="CBName_SelectionChanged" />
+                <TextBox Name="TBName" Width="120"/>
                 <TextBlock Text="Выберите тип материала" Margin="10,0,0,0"/>
                 <ComboBox Name="CBTitle" Width="120" SelectionChanged="CBTitle_SelectionChanged" />
                 <TextBlock Text="Ввдение кол-во на складе" Margin="20,0,0,0"/>
@@ -27,9 +28,9 @@
                 <TextBox Name="TBMin" Width="120"/>
                 <TextBlock Margin="30,0,0,0" Text="Ввдение стоимость"/>
                 <TextBox Name="TBStoimost" Width="120"/>
+                <Button Content="Изменить запись" Name="BRedakt" Width="120" Margin="5" Click="BRedakt_Click"/>
+                <Button Name="BDel" Content="Удалить запись" Width="120" Click="BDel_Click"/>
             </StackPanel>
-            <Button Content="Изменить запись" Name="BRedakt" Width="120" Margin="5"/>
-            <Button Name="BDel" Content="Удалить запись" Width="120"/>
         </StackPanel>
     </Grid>
 </Window>
