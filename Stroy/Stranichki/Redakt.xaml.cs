@@ -29,6 +29,12 @@ namespace Stroy.Stranichki
             CBTitle.SelectedValuePath = "ID";
             CBTitle.DisplayMemberPath = "Title";
 
+            CBPost.ItemsSource = DateBase.DB.Supplier.ToList();
+            CBPost.SelectedValuePath = "ID";
+            CBPost.DisplayMemberPath = "Title";
+            IsCreate = true;
+            //LbSupliers.SelectedValuePath = "ID";
+            //LbSupliers.DisplayMemberPath = "Title";
         }
         Material MaterialEdit = new Material();
         public Redakt(Material editImport)

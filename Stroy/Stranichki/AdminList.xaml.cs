@@ -148,20 +148,9 @@ namespace Stroy.Stranichki
             }
         }
 
-        private void BRedakt_Loaded(object sender, RoutedEventArgs e)
-        {
-            Button B = (Button)sender;
-            int id = Convert.ToInt32(B.Uid);
-            Material MaterialEdit = DateBase.DB.Material.FirstOrDefault(y => y.ID == id);
-            Redakt editWindow = new Redakt(MaterialEdit);
-            editWindow.ShowDialog();
-
-        }
-
-
         private void BIzmena_Click(object sender, RoutedEventArgs e)
         {
-            var selectedList = LVList.SelectedItem;
+            var selectedList = LVList.SelectedItems;
             double maxMc = 0;
             foreach (Material mC in selectedList)
             {
@@ -180,6 +169,23 @@ namespace Stroy.Stranichki
                 }
                 LVList.Items.Refresh();
             }
+        }
+
+
+        private void BDobav_Click(object sender, RoutedEventArgs e)
+        {
+            Redakt editWindow = new  Redakt();
+            editWindow.ShowDialog();
+        }
+
+        private void BRedakt_Click(object sender, RoutedEventArgs e)
+        {
+                Button B = (Button)sender;
+                int id = Convert.ToInt32(B.Uid);
+                Material MaterialEdit = DateBase.DB.Material.FirstOrDefault(y => y.ID == id);
+                Redakt editWindow = new Redakt(MaterialEdit);
+                editWindow.ShowDialog();
+
         }
     }
 }

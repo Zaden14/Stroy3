@@ -17,7 +17,7 @@
             <StackPanel>
                 <TextBlock FontSize="17" Margin="5,0"  Width="250" Text="Введите данные для поиска" HorizontalAlignment="Left"/>
                 <TextBox Name="TBPoisk"  Height="30" Width="250" Margin="5,0" HorizontalAlignment="Left" TextChanged="TBPoisk_TextChanged" />
-                <Button Visibility="Hidden" Name="BIzmena" Width="150" Height="30"  Margin="0,5,0,0" Content="Изменить запись" Click="BIzmena_Click" />
+                <Button  Name="BIzmena" Width="150" Height="30"  Margin="0,5,0,0" Content="Изменить запись" Visibility="Hidden" Click="BIzmena_Click" />
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Фильтровать:" FontSize="17"/>
@@ -37,7 +37,7 @@
             </StackPanel>
             <StackPanel>
                 <TextBlock Name="TBVsego" Width="150" Height="30"/>
-                <Button Name="BDobav" Height="30" Width="100" Content=" Добавить"/>
+                <Button Name="BDobav" Height="30" Width="100" Content=" Добавить" Click="BDobav_Click"/>
             </StackPanel>
         </StackPanel>
         <ListView  Grid.Row="1"  Name="LVList" SelectionMode="Extended" SelectionChanged="LVList_SelectionChanged">
@@ -62,7 +62,7 @@
                                     <TextBlock Width="450" TextWrapping="Wrap" Name="TBSup" Loaded="TBSup_Loaded" Uid="{Binding ID}"></TextBlock>
                                 </StackPanel>
                                 <TextBlock Name="TbLeft" Text="{Binding CountInStock, StringFormat={}Остаток: {0} шт}"></TextBlock>
-                                <Button Name="BRedakt" Content="Редактировать" Loaded="BRedakt_Loaded" Margin="0,0,5,0" Height="30" Width="120"/>
+                                <Button Name="BRedakt" Click="BRedakt_Click" Content="Редактировать" Margin="0,0,5,0" Height="30" Width="120"/>
                             </StackPanel>
                         </Border>
                     </Grid>

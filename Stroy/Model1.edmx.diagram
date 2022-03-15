@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="Model.Agent" Width="1.5" PointX="3" PointY="1.125" />
         <EntityTypeShape EntityType="Model.AgentPriorityHistory" Width="1.5" PointX="5.25" PointY="19.5" />
         <EntityTypeShape EntityType="Model.AgentType" Width="1.5" PointX="0.75" PointY="2.25" />
-        <EntityTypeShape EntityType="Model.Material" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="Model.Material" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.MaterialCountHistory" Width="1.5" PointX="5.25" PointY="10.125" />
         <EntityTypeShape EntityType="Model.MaterialSupplier" Width="1.5" PointX="8.25" PointY="12.125" />
         <EntityTypeShape EntityType="Model.MaterialType" Width="1.5" PointX="0.75" PointY="12.25" />
