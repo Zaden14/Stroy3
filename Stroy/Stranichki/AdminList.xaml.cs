@@ -176,6 +176,7 @@ namespace Stroy.Stranichki
         {
             Redakt editWindow = new  Redakt();
             editWindow.ShowDialog();
+            LVList.Items.Refresh();
         }
 
         private void BRedakt_Click(object sender, RoutedEventArgs e)

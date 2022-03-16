@@ -25,16 +25,16 @@ namespace Stroy.Stranichki
         public Redakt()
         {
             InitializeComponent();
-            CBTitle.ItemsSource = DateBase.DB.MaterialType.ToList();
-            CBTitle.SelectedValuePath = "ID";
-            CBTitle.DisplayMemberPath = "Title";
+            CBType.ItemsSource = DateBase.DB.MaterialType.ToList();
+            CBType.SelectedValuePath = "ID";
+            CBType.DisplayMemberPath = "Title";
 
             CBPost.ItemsSource = DateBase.DB.Supplier.ToList();
             CBPost.SelectedValuePath = "ID";
             CBPost.DisplayMemberPath = "Title";
             IsCreate = true;
-            //LbSupliers.SelectedValuePath = "ID";
-            //LbSupliers.DisplayMemberPath = "Title";
+            LBTitle.SelectedValuePath = "ID";
+            LBTitle.DisplayMemberPath = "Title";
         }
         Material MaterialEdit = new Material();
         public Redakt(Material editImport)
@@ -42,7 +42,7 @@ namespace Stroy.Stranichki
             InitializeComponent();
             MaterialEdit = editImport;
 
-            CBTitle.ItemsSource = DateBase.DB.MaterialType.ToList();
+            CBType.ItemsSource = DateBase.DB.MaterialType.ToList();
 
         }
 

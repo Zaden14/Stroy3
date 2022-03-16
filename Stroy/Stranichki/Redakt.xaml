@@ -5,21 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stroy.Stranichki"
         mc:Ignorable="d"
-        Icon="C:\Users\БуслаевНР\Downloads\Stroy2-master\Stroy\Resources\Chernovik.ico"
+        Icon="C:\Users\БуслаевНР\Downloads\Stroy3-master\Stroy\Resources\Chernovik.ico"
         Title="Окно редактирования" Height="400" Width="300">
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                <Image Margin="5" Source="C:\Users\БуслаевНР\Downloads\Stroy2-master\Stroy\Resources\picture.png" Height="30" Width="80"/>
+                <Image Margin="5" Source="C:\Users\БуслаевНР\Downloads\Stroy3-master\Stroy\Resources\picture.png" Height="30" Width="80"/>
                 <Button Margin="0,5,0,0" Content="Изменить фото"/>
-                <ComboBox Name="CBTitle" Margin="5"/>
-                <TextBox Name="TBTitle" Width="100" Height="60"/>
+                <TextBlock Text="Поставщик" Margin="5,0,0,0"/>
                 <ComboBox Name="CBPost" Margin="5"/>
-                <TextBox Name="TBPost" Width="100" Height="60"/> 
+                <ListBox Name="LBTitle" Width="100" Height="60"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <TextBlock Text="Наименование:" Margin="50,0,0,0"/>
                 <TextBox Name="TBName" Width="120"/>
+                <TextBlock Margin="60,0,0,0" Text="Материал:"/>
+                <ComboBox Name="CBType" Margin="5" Height="20" Width="120"/>
                 <TextBlock Text="На складе:" Margin="60,0,0,0"/>
                 <TextBox Name="TBSklad" Width="120"/>
                 <TextBlock Text="Единица измерения:" Margin="40,0,0,0"/>
